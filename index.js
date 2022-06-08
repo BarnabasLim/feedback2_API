@@ -6,7 +6,7 @@ const app=express();
 const PORT=5000;
 
 app.use(bodyParcer.json());
-app.use('/api/feedback/', feedbackRoutes);
+app.use('/api/feedbacks/', feedbackRoutes);
 app.get('/',(req,res)=>{
     console.log('[Test]');
     res.send('Hello form Homepage')

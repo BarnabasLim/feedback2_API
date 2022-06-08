@@ -1,11 +1,12 @@
 import express from "express";
 import bodyParcer from "body-parser";
+import feedbackRoutes from "./routes/feedbacks.js"
 
 const app=express();
 const PORT=5000;
 
 app.use(bodyParcer.json());
-
+app.use('/api/feedback/', feedbackRoutes);
 app.get('/',(req,res)=>{
     console.log('[Test]');
     res.send('Hello form Homepage')

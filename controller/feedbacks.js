@@ -1,3 +1,4 @@
+import {db_addFeedback} from '../api/firestore.js'
 let feedbacks=[
     {
         "id":"2992h929ce2",
@@ -31,7 +32,7 @@ export const getFeedback=(req, res)=>{
     res.send(feedback);
 }
 
-export const addFeedback=(req, res)=>{
+export const addFeedback=async(req, res)=>{
     //1. Access req.body or req.params
     const feedback=req.body;
     //2. Interact with database
@@ -39,6 +40,7 @@ export const addFeedback=(req, res)=>{
         res.send("id already exist or no id provided");
     }else{
         feedbacks.push(feedback);
+        await db_addFeedback(feedback,()=>{},()=>{});
         res.send(feedback);
     }
     

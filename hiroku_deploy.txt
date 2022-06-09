@@ -21,3 +21,17 @@ in CMD >>heroku create
 
 5.Deploy 
 git push heroku main
+
+
+6. If there is you have deleted the app in the heroku dashbaord
+https://stackoverflow.com/questions/34379130/pushing-to-heroku-fails-no-such-app-fatal
+Try to re-add the remote url.
+
+// Check for the current url 
+git remote -v
+
+// remove remote url
+git remote rm heroku
+
+// re-add the remote url
+git remote add heroku git@heroku.com:boiling-inlet-6957.git

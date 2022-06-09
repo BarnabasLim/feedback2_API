@@ -45,7 +45,7 @@ export const addFeedback=async(req, res)=>{
     //     await db_addFeedback(feedback,()=>{},()=>{});
     //     res.send(feedback);
     // }
-    await db_addFeedback(feedback,()=>{},()=>{});
+    await db_addFeedback(feedback,(ans)=>{feedback=ans},()=>{});
     res.send(feedback);
     //3. Send res
 }

@@ -1,0 +1,23 @@
+https://www.youtube.com/watch?v=27GoRa4d15c
+package.json
+
+1. must have start scripts 
+{
+	...
+	"scripts":{
+		"start":...
+	}
+
+}
+
+2.install hiroku CLI
+https://devcenter.heroku.com/articles/heroku-cli
+
+3. Login
+in CMD >>heroku login
+
+4. Create Web application
+in CMD >>heroku create
+
+5.Deploy 
+git push heroku main

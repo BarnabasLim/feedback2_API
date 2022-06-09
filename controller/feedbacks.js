@@ -36,7 +36,7 @@ export const getFeedback=async(req, res)=>{
 
 export const addFeedback=async(req, res)=>{
     //1. Access req.body or req.params
-    const feedback=req.body;
+    let feedback=req.body;
     //2. Interact with database
     // if(feedbacks.find((item)=>item.id==feedback.id) || !feedback.id){
     //     res.send("id already exist or no id provided");
@@ -45,7 +45,8 @@ export const addFeedback=async(req, res)=>{
     //     await db_addFeedback(feedback,()=>{},()=>{});
     //     res.send(feedback);
     // }
-    await db_addFeedback(feedback,(ans)=>{feedback=ans},()=>{});
+    await db_addFeedback(feedback,(ans)=>{
+        feedback={...ans}},()=>{});
     res.send(feedback);
     //3. Send res
 }

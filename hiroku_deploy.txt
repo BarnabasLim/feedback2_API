@@ -21,6 +21,7 @@ in CMD >>heroku create
 
 5.Deploy 
 git push heroku main
+or master
 
 
 6. If there is you have deleted the app in the heroku dashbaord

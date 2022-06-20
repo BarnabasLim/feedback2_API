@@ -110,4 +110,12 @@ Step 7:
 		res.send(users);
 	
 	})
-Step 3: install postMan
+Step 8: install cors
+npm i cors
+https://www.youtube.com/watch?v=PNtFSVU-YTI
+
+in index.js
+const cors=require("cors")
+app.use(cors({
+	origin: "https://loquacious-daffodil-b157e7.netlify.app/"
+}))

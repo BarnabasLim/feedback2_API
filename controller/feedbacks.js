@@ -42,7 +42,6 @@ export const addFeedback=async(req, res)=>{
     //     res.send("id already exist or no id provided");
     // }else{
     //     feedbacks.push(feedback);
-    //     await db_addFeedback(feedback,()=>{},()=>{});
     //     res.send(feedback);
     // }
     await db_addFeedback(feedback,(ans)=>{
@@ -58,7 +57,7 @@ export const deleteFeedback=async(req, res)=>{
     await db_deleteFeedback(id, ()=>{},(e)=>{console.log(e)});
     
     //3. Send res
-    res.send(`${id} deleted`)
+    res.send(id)
 }
 
 export const editFeedback=async(req, res)=>{

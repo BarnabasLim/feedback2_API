@@ -11,7 +11,7 @@ const PORT=5000;
 // }));
 const cors=require("cors")
 app.use(cors({
-	origin: "https://loquacious-daffodil-b157e7.netlify.app/"
+	origin: "https://loquacious-daffodil-b157e7.netlify.app"
 }))
 app.use(bodyParcer.json());
 app.use('/api/feedbacks/', feedbackRoutes);
